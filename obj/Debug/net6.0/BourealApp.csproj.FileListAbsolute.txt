@@ -1,0 +1,15 @@
+C:\Users\yurin\source\repos\BourealApp\bin\Debug\net6.0\BourealApp.exe
+C:\Users\yurin\source\repos\BourealApp\bin\Debug\net6.0\BourealApp.deps.json
+C:\Users\yurin\source\repos\BourealApp\bin\Debug\net6.0\BourealApp.runtimeconfig.json
+C:\Users\yurin\source\repos\BourealApp\bin\Debug\net6.0\BourealApp.dll
+C:\Users\yurin\source\repos\BourealApp\bin\Debug\net6.0\BourealApp.pdb
+C:\Users\yurin\source\repos\BourealApp\obj\Debug\net6.0\BourealApp.csproj.AssemblyReference.cache
+C:\Users\yurin\source\repos\BourealApp\obj\Debug\net6.0\BourealApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yurin\source\repos\BourealApp\obj\Debug\net6.0\BourealApp.AssemblyInfoInputs.cache
+C:\Users\yurin\source\repos\BourealApp\obj\Debug\net6.0\BourealApp.AssemblyInfo.cs
+C:\Users\yurin\source\repos\BourealApp\obj\Debug\net6.0\BourealApp.csproj.CoreCompileInputs.cache
+C:\Users\yurin\source\repos\BourealApp\obj\Debug\net6.0\BourealApp.dll
+C:\Users\yurin\source\repos\BourealApp\obj\Debug\net6.0\refint\BourealApp.dll
+C:\Users\yurin\source\repos\BourealApp\obj\Debug\net6.0\BourealApp.pdb
+C:\Users\yurin\source\repos\BourealApp\obj\Debug\net6.0\BourealApp.genruntimeconfig.cache
+C:\Users\yurin\source\repos\BourealApp\obj\Debug\net6.0\ref\BourealApp.dll
