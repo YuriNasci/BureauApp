@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace BourealApp.Models
 {
-    internal class UsuarioBase
+    public class UsuarioBase
     {
-        protected Guid Id { get; set; }
-        protected string Login { get; set; }
-        protected string Senha { get; set; }
-        protected Guid CodigoCliente { get; set; }
+        public Guid Id { get; set; }
+        public string Login { get; set; }
+        public string Senha { get; set; }
+        public Guid CodigoCliente { get; set; }
         
         public string Logar(string login, string senha)
         {

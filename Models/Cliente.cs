@@ -13,5 +13,6 @@ namespace BourealApp.Models
         protected string Cnpj { get; set; }
         protected List<string> Telefone { get; set; }
         protected List<UsuarioBase> ListaUsuarioBase { get; set; }
+        protected Contrato Contrato { get; set; }
     }
 }

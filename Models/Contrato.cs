@@ -11,5 +11,6 @@ namespace BourealApp.Models
         protected Guid Id { get; set; }
         protected decimal Valor { get; set; }
         protected DateTime DataVigencia { get; set; }
+        protected PlanoTarifacao PlanoTarifacao { get; set; }
     }
 }
