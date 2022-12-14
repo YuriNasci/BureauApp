@@ -12,6 +12,7 @@ namespace BourealApp.Models
         public string Login { get; set; }
         public string Senha { get; set; }
         public Guid CodigoCliente { get; set; }
+        public bool IsOwner { get; set; }
         
         public string Logar(string login, string senha)
         {

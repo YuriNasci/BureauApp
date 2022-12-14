@@ -10,6 +10,7 @@ namespace BureauApp.Models
     public class BureauContext
     {
         public List<UsuarioBase> Usuarios { get; set; }
+        public List<Cliente> Clientes { get; set; }
 
         public BureauContext()
         {
@@ -19,7 +20,8 @@ namespace BureauApp.Models
                 {
                     Id = new Guid(),
                     Login = "Adm",
-                    Senha = "root"
+                    Senha = "root",
+                    IsOwner = true,
                 },
                 new UsuarioConsultor()
                 {
@@ -28,6 +30,8 @@ namespace BureauApp.Models
                     Senha = "yn2022"
                 }
             };
+
+            Clientes = new List<Cliente>();
         }
     }
 }

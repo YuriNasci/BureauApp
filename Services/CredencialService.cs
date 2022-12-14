@@ -10,11 +10,15 @@ namespace BureauApp.Services
 {
     internal class CredencialService
     {
-        BureauContext context = new BureauContext();
+        private BureauContext _context;
+        public CredencialService(BureauContext context)
+        {
+            _context = context;
+        }
 
         public UsuarioBase? Logar(string login, string senha)
         {
-            return context.Usuarios.FirstOrDefault(u => u.Login == login && u.Senha == senha);
+            return _context.Usuarios.FirstOrDefault(u => u.Login == login && u.Senha == senha);
         }
     }
 }

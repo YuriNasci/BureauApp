@@ -8,11 +8,11 @@ namespace BourealApp.Models
 {
     internal class Cliente
     {
-        protected Guid Id { get; set; }
-        protected string Name { get; set; }
-        protected string Cnpj { get; set; }
-        protected List<string> Telefone { get; set; }
-        protected List<UsuarioBase> ListaUsuarioBase { get; set; }
-        protected Contrato Contrato { get; set; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Cnpj { get; set; }
+        public List<string> Telefones { get; set; }
+        public List<UsuarioBase> ListaUsuarioBase { get; set; }
+        public Contrato Contrato { get; set; }
     }
 }
