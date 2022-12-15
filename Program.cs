@@ -6,7 +6,7 @@ using BureauApp.Models;
 using BureauApp.Services;
 using System.Xml.Linq;
 /*
- CHECK-LIST:
+ CHECK-LIST DE REQUISITOS:
 
 [ ] RF1: Consultar Bureaus Externos 
 [X] RF2: Cadastrar Clientes

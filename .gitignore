@@ -1,9 +1,7 @@
 
 *.v2
+obj/*
 .vs/*
-.vs/BureauApp/v17/.suo
-.vs/BureauApp/v17/.suo
-obj*
-obj/Debug/net6.0/BureauApp.assets.cache
-obj/Debug/net6.0/BureauApp.assets.cache
-.vs/BureauApp/v17/.suo
+*.1
+*.1
+obj/project.nuget.cache
