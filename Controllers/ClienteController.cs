@@ -1,5 +1,6 @@
 ﻿using BourealApp.Models;
 using BureauApp.Models;
+using BureauApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,12 @@ namespace BureauApp.Controllers
     internal class ClienteController
     {
         public BureauContext _context { get; set; }
+        public ClienteService _clienteService { get; set; }
 
         public ClienteController(BureauContext context)
         {
             _context = context;
+            _clienteService = new ClienteService(context);
         }
 
         public void Criar()
@@ -54,7 +57,7 @@ namespace BureauApp.Controllers
 
             Cliente cliente = new Cliente()
             {
-                Name = nome,
+                Nome = nome,
                 Cnpj = cnpj,
                 Telefones = new List<string>()
             };
@@ -63,6 +66,29 @@ namespace BureauApp.Controllers
             if (telefone2 != null) cliente.Telefones.Add(telefone2);
 
             _context.Clientes.Add(cliente);
+            Console.WriteLine("Cliente cadastrado com sucesso.");
+        }
+        
+        public void Excluir()
+        {
+            Console.WriteLine("Digite o número do cliente a ser excluído:");
+            var clientes = _clienteService.GetList().OrderBy(c => c.Nome).ToArray();
+            int i = 1;
+            foreach(var cliente in clientes)
+            {
+                Console.WriteLine(i++ + " - " + cliente.Nome);
+            }
+
+            var opcaoReaded = Console.ReadLine();
+            while(opcaoReaded == null || int.Parse(opcaoReaded ?? "") >= i)
+            {
+                Console.WriteLine("Opção Inválida");
+            }
+
+            int opcaoInt = int.Parse(opcaoReaded ?? "") - 1;
+
+            _clienteService.Excluir(clientes[opcaoInt]);
+            Console.WriteLine("Cliente excluído.");
         }
     }
 }

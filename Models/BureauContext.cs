@@ -31,7 +31,21 @@ namespace BureauApp.Models
                 }
             };
 
-            Clientes = new List<Cliente>();
+            Clientes = new List<Cliente>()
+            {
+                new Cliente()
+                {
+                    Nome = "Indústrias Acme",
+                    Cnpj = "55.537.921/0001-80",
+                    Telefones = new List<string>{"4002-8922"}
+                },
+                new Cliente()
+                {
+                    Nome = "Organizações Tabajara",
+                    Cnpj = "28.952.259/0001-51",
+                    Telefones = new List<string>{"0500-2022-007"}
+                }
+            };
         }
     }
 }

@@ -10,7 +10,7 @@ using System.Xml.Linq;
 
 [ ] RF1: Consultar Bureaus Externos 
 [X] RF2: Cadastrar Clientes
-[ ] RF3: Excluir Clientes
+[X] RF3: Excluir Clientes
 [ ] RF4: Cadastrar Usuários Administrador
 [ ] RF5: Excluir Usuários Administrador
 [ ] RF6: Cadastrar Usuários Consultor
@@ -41,42 +41,51 @@ while (true) {
     var usuario = credencialService.Logar(login ?? String.Empty, senha);
     if (usuario != null)
     {
-        Console.WriteLine("Menu: ");
-
-        if (usuario.IsOwner)
+        string? opcao = "";
+        while (opcao != "0")
         {
-            Console.WriteLine("1 - Encerrar Sessão");
-            Console.WriteLine("2 - Fechar Aplicação");
-            Console.WriteLine("3 - Cadastrar Clientes");
-            var opcao = Console.ReadLine();
+            Console.WriteLine("Menu: ");
 
-            if (opcao == "1")
+            if (usuario.IsOwner)
             {
-                continue;
-            }
-            else if (opcao == "2")
-            {
-                break;
-            }
+                Console.WriteLine("1 - Encerrar Sessão");
+                Console.WriteLine("2 - Fechar Aplicação");
+                Console.WriteLine("3 - Cadastrar Clientes");
+                Console.WriteLine("4 - Excluir Clientes");
+                Console.WriteLine("0 - Sair");
+                opcao = Console.ReadLine();
 
-            switch (opcao)
-            {
-                case "3":
-                    clienteController.Criar();
+                if (opcao == "1")
+                {
+                    continue;
+                }
+                else if (opcao == "2")
+                {
                     break;
+                }
+
+                switch (opcao)
+                {
+                    case "3":
+                        clienteController.Criar();
+                        break;
+                    case "4":
+                        clienteController.Excluir();
+                        break;
+                }
             }
-        } else
-        {
-            Console.WriteLine("1 - Encerrar Sessão");
-            Console.WriteLine("2 - Fechar Aplicação");
-            var opcao = Console.ReadLine();
-            if (opcao == "1")
+            else
             {
-                continue;
-            }
-            else if (opcao == "2")
-            {
-                break;
+                Console.WriteLine("0 - Sair");
+                opcao = Console.ReadLine();
+                if (opcao == "1")
+                {
+                    continue;
+                }
+                else if (opcao == "2")
+                {
+                    break;
+                }
             }
         }
     } else

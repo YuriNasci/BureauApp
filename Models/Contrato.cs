@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BourealApp.Models
 {
-    internal class Contrato
+    public class Contrato
     {
         protected Guid Id { get; set; }
         protected decimal Valor { get; set; }
